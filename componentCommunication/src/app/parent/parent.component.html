@@ -1,0 +1,14 @@
+<div class="layout">
+    <div class="item-list">
+        <div class="card" *ngFor="let item of data; let i = index" 
+        [ngStyle]="{ 'border-left': (activeIndex == i ? '8px' : '4px') + ' solid ' + item.color}"
+        (click)="onClick(item, i)">
+            <h2 [ngStyle]="{ 'color' : activeIndex == i && isTitleChange ? 'pink' : 'black' }">{{ item.name }}</h2>
+            <p>{{ item.description | maskExtra }}</p>
+        </div>
+    </div>
+
+    <div class="item-display">
+        <app-child [cardData]="toSendData" (titleChangeEvent)="changeTitleColor()"></app-child>
+    </div>
+</div>

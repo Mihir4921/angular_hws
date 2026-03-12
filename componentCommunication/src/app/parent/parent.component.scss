@@ -1,0 +1,28 @@
+.layout {
+  display: flex;
+}
+
+.item-list {
+  width: 50%;
+  border-right: 1px solid;
+}
+
+.card {
+  padding: 8px 12px;
+  border-bottom: 1px solid;
+}
+
+.card h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.item-display {
+  width: 50%;
+  padding: 10px;
+}
