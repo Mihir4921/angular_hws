@@ -1,0 +1,9 @@
+<h2>Book a flight</h2>
+
+    <select [(ngModel)]="flightType">
+        <option value = "one-way-flight">One-way flight</option>
+        <option value = "return-flight">Return flight</option>
+    </select>
+    <input type="date" [(ngModel)]="departureDate" required>
+    <input type="date" *ngIf="flightType === 'return-flight'" [(ngModel)]="arrivalDate" required>
+    <button type="submit" (click)="onBook()">Book</button>
